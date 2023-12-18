@@ -12,6 +12,7 @@ class EmailTextFormField extends StatelessWidget{
     return Padding(
       padding: const EdgeInsets.all(15),
       child: TextFormField(
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         autocorrect: true,
         obscureText: false,
         keyboardType: TextInputType.emailAddress,

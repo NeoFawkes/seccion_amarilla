@@ -23,6 +23,7 @@ class MainTextFormField extends StatelessWidget{
     return Padding(
       padding: const EdgeInsets.all(15),
       child: TextFormField(
+        autovalidateMode: AutovalidateMode.onUserInteraction,
         autocorrect: autocorrect,
         obscureText: obscureText,
         keyboardType: keyboardType,

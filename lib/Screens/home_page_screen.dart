@@ -16,7 +16,7 @@ class _HomePageScreenState extends State<HomePageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Form(autovalidateMode: AutovalidateMode.onUserInteraction,
+      body: Form(
         key: _formkey,
           child: CustomScrollView(
             slivers: [

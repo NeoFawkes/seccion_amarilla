@@ -3,8 +3,4 @@ export 'package:seccion_amarilla/Screens/main_screen.dart';
 export 'package:seccion_amarilla/Screens/alert_screen.dart';
 export 'package:seccion_amarilla/Screens/sign_up_screen_1.dart';
 export 'package:seccion_amarilla/Screens/sign_up_screen_2.dart';
-export 'package:seccion_amarilla/Screens/sign_up_screen_3.dart';
-export 'package:seccion_amarilla/Screens/sign_up_screen_4.dart';
-export 'package:seccion_amarilla/Screens/sign_up_screen_5.dart';
-export 'package:seccion_amarilla/Screens/sign_up_screen_6.dart';
 export 'package:seccion_amarilla/Screens/forgot_password_screen.dart';

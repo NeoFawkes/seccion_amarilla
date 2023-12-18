@@ -9,11 +9,7 @@ class AppRoutes{
     MenuOption(route: 'mainScreen', iconData: Icons.home, name: 'Início', screen: const MainScreen()),
     MenuOption(route: 'forgotPasswordScreen', iconData: Icons.home, name: 'Recuperar contraseña', screen: const ForgotPasswordScreen()),
     MenuOption(route: 'signUpScreen1', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen1()),
-    MenuOption(route: 'signUpScreen2', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen2()),
-    MenuOption(route: 'signUpScreen3', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen3()),
-    MenuOption(route: 'signUpScreen4', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen4()),
-    MenuOption(route: 'signUpScreen5', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen5()),
-    MenuOption(route: 'signUpScreen6', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen6()),
+    MenuOption(route: 'signUpScreen2', iconData: Icons.home, name: 'Crear una nueva cuenta', screen: const SignUpScreen2())
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes(){

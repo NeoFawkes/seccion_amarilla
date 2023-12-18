@@ -6,3 +6,4 @@ export 'package:seccion_amarilla/Widgets/text_title.dart';
 export 'package:seccion_amarilla/Widgets/text_sub_title.dart';
 export 'package:seccion_amarilla/Widgets/custom_card_type_1.dart';
 export 'package:seccion_amarilla/Widgets/custom_card_type_2.dart';
+export 'package:seccion_amarilla/Widgets/name_text_form_field.dart';

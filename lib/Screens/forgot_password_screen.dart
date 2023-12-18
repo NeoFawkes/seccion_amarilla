@@ -20,7 +20,7 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const SecondaryAppBar(),
-      body: Form( autovalidateMode: AutovalidateMode.onUserInteraction,
+      body: Form(
         key: _formkey,
         child: CustomScrollView(
           slivers: [
