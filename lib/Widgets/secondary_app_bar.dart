@@ -17,6 +17,10 @@ class SecondaryAppBar extends StatelessWidget implements PreferredSizeWidget{
     return AppBar(
       title: Text(title), centerTitle: true,
       backgroundColor: Theme.of(context).colorScheme.background,
+      leading: IconButton(
+          icon: Icon(Icons.arrow_left, color: Theme.of(context).colorScheme.onBackground),
+          onPressed:() => Navigator.of(context).pop
+      )
     );
   }
 }
