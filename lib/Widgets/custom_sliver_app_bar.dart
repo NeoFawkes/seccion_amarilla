@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class SecondaryAppBar extends StatelessWidget implements PreferredSizeWidget{
+class CustomSliverAppBar extends StatelessWidget implements PreferredSizeWidget{
 
   final String title;
 
-  const SecondaryAppBar({
+  const CustomSliverAppBar({
     super.key,
     this.title = ""
   });
@@ -14,7 +14,7 @@ class SecondaryAppBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
+    return SliverAppBar(
       title: Text(title), centerTitle: true,
       backgroundColor: Theme.of(context).colorScheme.background,
     );
