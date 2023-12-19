@@ -26,8 +26,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               hasScrollBody: true,
               child: Column(
                 children: <Widget>[
-                  const Column(
-                    children: <Widget>[
+                  Column(
+                    children: const <Widget>[
                       TextTitle(text: "Encuentra tu cuenta"),
                       TextSubTitle(text: "Ingresa tu correo electrónico"),
                       EmailTextFormField(),
