@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:seccion_amarilla/Widgets/widgets.dart';
 
-import '../Router/app_routes.dart';
-
 class ForgotPasswordScreen extends StatefulWidget{
 
 
@@ -28,8 +26,8 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               hasScrollBody: true,
               child: Column(
                 children: <Widget>[
-                  Column(
-                    children: const <Widget>[
+                  const Column(
+                    children: <Widget>[
                       TextTitle(text: "Encuentra tu cuenta"),
                       TextSubTitle(text: "Ingresa tu correo electrónico"),
                       EmailTextFormField(),
