@@ -75,6 +75,9 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                           child: ElevatedButton(
                             onPressed: (){
                               if (_formkey.currentState!.validate()){
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(content: Text('Se envió un correo para verificar tu cuenta')),
+                                );
                               }
                             },
                             child: const Text("Crear nueva cuenta"),
