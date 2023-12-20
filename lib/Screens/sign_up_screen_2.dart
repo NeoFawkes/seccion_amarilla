@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seccion_amarilla/Models/user.dart';
+import '../Tools/regex_pattern.dart';
 import '../Widgets/widgets.dart';
 
 class SignUpScreen2 extends StatefulWidget{
@@ -11,6 +13,7 @@ class SignUpScreen2 extends StatefulWidget{
 class _SignUpScreenState extends State<SignUpScreen2> {
 
   final _formkey = GlobalKey<FormState>();
+  final User user = User();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,8 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                                 hintText: "John",
                                 labelText: "Nombre",
                                 validator: (value){
-                                  if (value == null || value.isEmpty) return "El cámpo está vacío";
+                                  if (value == null || value.isEmpty) return "El campo está vacío";
+                                  setState(() => user.setFirstName = value);
                                   return null;
                                 }
                             ),
@@ -41,34 +45,46 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                                 hintText: "Doe",
                                 labelText: "Apellido",
                                 validator: (value){
-                                  if (value == null || value.isEmpty) return "El cámpo está vacío";
+                                  if (value == null || value.isEmpty) return "El campo está vacío";
+                                  setState(() => user.setLastName = value);
                                   return null;
                                 }
                             ),
                           ],
                         ),
-                        const EmailTextFormField(),
+                         EmailTextFormField(
+                          validator: (value){
+                            RegExp regExp = RegExp(RegexPattern.emailPattern);
+                            if(value == null || value.isEmpty || !regExp.hasMatch(value?? '')) return "Ingresa un correo válido";
+                            setState(() => user.setEmail = value);
+                            return null;
+                          },
+                        ),
                         MainTextFormField(
                           hintText: "********",
                           labelText: "Contraseña",
                           obscureText: true,
                           validator:(value){
-                            if (value == null || value.isEmpty) return "El cámpo está vacío";
+                            if (value == null || value.isEmpty) return "El campo está vacío";
+                            setState(() => user.setPassword = value);
                             return null;
                           },
                         ),
-                        ElevatedButton(
-                          onPressed: (){
-                            if (_formkey.currentState!.validate()){
-                            }
-                          },
-                          child: const Text("Siguiente"),
+                        Container(
+                          padding: const EdgeInsets.only(bottom: 20),
+                          child: ElevatedButton(
+                            onPressed: (){
+                              if (_formkey.currentState!.validate()){
+                              }
+                            },
+                            child: const Text("Crear nueva cuenta"),
+                          ),
                         ),
                       ],
                     ),
                   );
                 },
-                childCount: 6
+                childCount: 1
               ),
           ),
         ],

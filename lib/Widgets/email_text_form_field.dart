@@ -4,8 +4,12 @@ import '../Tools/regex_pattern.dart';
 
 class EmailTextFormField extends StatelessWidget{
 
+  final String? Function(String?)? validator;
 
-  const EmailTextFormField({super.key,});
+  const EmailTextFormField({
+    super.key,
+    required this.validator
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +20,7 @@ class EmailTextFormField extends StatelessWidget{
         autocorrect: true,
         obscureText: false,
         keyboardType: TextInputType.emailAddress,
-        validator: (value){
-          RegExp regExp = RegExp(RegexPattern.emailPattern);
-          return !regExp.hasMatch(value?? '')? "Ingresa un correo válido" : null;
-        },
+        validator: validator,
         decoration: const InputDecoration(
           hintText: "john@email.com",
           labelText: "Correo Electrónico"
