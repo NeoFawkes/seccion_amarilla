@@ -37,7 +37,7 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                                 labelText: "Nombre",
                                 validator: (value){
                                   if (value == null || value.isEmpty) return "El campo está vacío";
-                                  setState(() => user.setFirstName = value);
+                                  user.setFirstName = value;
                                   return null;
                                 }
                             ),
@@ -46,7 +46,7 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                                 labelText: "Apellido",
                                 validator: (value){
                                   if (value == null || value.isEmpty) return "El campo está vacío";
-                                  setState(() => user.setLastName = value);
+                                  user.setLastName = value;
                                   return null;
                                 }
                             ),
@@ -56,7 +56,7 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                           validator: (value){
                             RegExp regExp = RegExp(RegexPattern.emailPattern);
                             if(value == null || value.isEmpty || !regExp.hasMatch(value)) return "Ingresa un correo válido";
-                            setState(() => user.setEmail = value);
+                            user.setEmail = value;
                             return null;
                           },
                         ),
@@ -66,7 +66,7 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                           obscureText: true,
                           validator:(value){
                             if (value == null || value.isEmpty) return "El campo está vacío";
-                            setState(() => user.setPassword = value);
+                            user.setPassword = value;
                             return null;
                           },
                         ),
