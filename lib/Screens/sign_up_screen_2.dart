@@ -55,7 +55,7 @@ class _SignUpScreenState extends State<SignUpScreen2> {
                          EmailTextFormField(
                           validator: (value){
                             RegExp regExp = RegExp(RegexPattern.emailPattern);
-                            if(value == null || value.isEmpty || !regExp.hasMatch(value?? '')) return "Ingresa un correo válido";
+                            if(value == null || value.isEmpty || !regExp.hasMatch(value)) return "Ingresa un correo válido";
                             setState(() => user.setEmail = value);
                             return null;
                           },
