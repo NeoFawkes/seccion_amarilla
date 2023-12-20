@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../Tools/regex_pattern.dart';
 
 class EmailTextFormField extends StatelessWidget{
 
