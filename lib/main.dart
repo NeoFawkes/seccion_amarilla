@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context)
+  {
     return MaterialApp(
-      title: 'Sección Amarilla',
+      title: 'Freedom',
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.initialRoute,
       routes:AppRoutes.getAppRoutes(),
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: CustomTheme.getLightThemeData,
       darkTheme: CustomTheme.getDarkThemeData,
-      home:  const HomePageScreen()
+      home: const HomePageScreen()
     );
   }
 }

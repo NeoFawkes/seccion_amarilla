@@ -6,8 +6,11 @@ class MainScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      appBar: MainAppBar(title: "Início"),
+    return Scaffold(
+      drawer: Drawer(
+        backgroundColor: Theme.of(context).colorScheme.onPrimary
+      ),
+      appBar: const MainAppBar(title: "Início"),
     );
   }
 

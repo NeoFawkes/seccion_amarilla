@@ -13,15 +13,6 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget{
   Widget build(BuildContext context) {
     return AppBar(
       title: Text(title), centerTitle: true,
-      leading: Builder(
-        builder: (BuildContext context){
-          return IconButton(
-            onPressed: (){},
-            icon: const Icon(Icons.menu),
-            tooltip: "Menú",
-          );
-        },
-      ),
       actions: [
         IconButton(
           onPressed: (){},
